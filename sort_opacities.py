@@ -16,8 +16,6 @@ for f in op:
 	pickle.dump(wavout,wavf)
 	wavf.close()
 	inf=open(f,'r').readlines()[110:-10] #Skip the header and the footer
-	if not os.path.isdir(f.split('.opa')[0]): #make a directory for that model file if it doesn't exist already
-		os.mkdir(f.split('.opa')[0])
 	for i in range(56):
 		out=inf[i*358:((i+1)*(358))] #Grab one depth point
 		opacity=[]
