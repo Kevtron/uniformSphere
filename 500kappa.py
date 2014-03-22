@@ -13,5 +13,5 @@ for i in range(56):
     array=np.array(pickle.load(f))
     opa[i]=np.reshape(array,(1071,2))[403][0]
     opa[i]*=float(kappa)
-f=open('sample_data/pacities/500kappa.dat','wb')
+f=open('sample_data/opacities/500kappa.dat','wb')
 pickle.dump(opa,f)
